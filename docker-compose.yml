@@ -1,0 +1,21 @@
+version: '2'
+services:
+  nginx:
+    container_name: 'nginx'
+    image: nginx:stable-alpine
+    restart: always
+    ports:
+      - '80:80'x
+    volumes:
+      - ./sites-enabled:/etc/nginx/conf.d
+  webapp:
+    container_name: 'webapp'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    command: 'npx serve -s ./build -l 3000'
+    expose:
+      - 3000
+    volumes:
+      - .:/app
