@@ -17,5 +17,3 @@ services:
     command: 'npx serve -s ./build -l 3000'
     expose:
       - 3000
-    volumes:
-      - .:/app

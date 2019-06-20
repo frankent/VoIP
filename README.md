@@ -2,12 +2,22 @@
 
 For now on Google Chrome `getDevices` is work perfectly but on **Safari it's still mystery** because it's always return empty string of `deviceId`
 
+![Sample result from Safari](https://i.ibb.co/QCrVMpf/image.png)
+
 # How to run
 
 I made this project from `react-create-app` but you no need to run any `npm` command, if you just want to check you just run this
 
 ```shell
-docker-compose up -d --build
+docker-compose up -d
+```
+
+if you want to rebuild app run this
+
+```shell
+ docker-compose rm --all &&
+ docker-compose build --no-cache &&
+ docker-compose up -d --force-recreate
 ```
 
 then go to your browser and open link `127.0.0.1` or `localhost` without any port (I force it run in port 80) and open console to check about result (sometime you need to wait longer than usual but it's not over 3 minutes)
