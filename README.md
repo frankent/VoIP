@@ -19,7 +19,7 @@ if you want to check or edit code you can go to this file `src/App.js` I believe
 If you want to run in your local without `Docker` just run
 
 ```shell
-npm ci // install all dependecies first (optional)s
+npm ci    // install all dependencies first (optional)
 npm start // run developement server with watch mode
 ```
 
